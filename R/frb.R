@@ -44,8 +44,8 @@
 #' sqrt(diag(summary(a)$cov))
 #
 #' @export
-frba <- function(lmrob.object, nboot=1000, return.coef = FALSE,return.indices = FALSE, centered=TRUE) {
-#frb <- function(lmrob.object, nboot=1000, return.coef = FALSE, return.indices = FALSE, centered=TRUE) {
+#frba <- function(lmrob.object, nboot=1000, return.coef = FALSE,return.indices = FALSE, centered=TRUE) {
+frb <- function(lmrob.object, nboot=1000, return.coef = FALSE, return.indices = FALSE, centered=TRUE) {
   lmrob.Chi <- Mchi
   lmrob.Psi <- Mpsi
   co <- lmrob.object$control

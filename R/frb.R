@@ -45,7 +45,7 @@
 #
 #' @export
 #frba <- function(lmrob.object, nboot=1000, return.coef = FALSE,return.indices = FALSE, centered=TRUE) {
-frb <- function(lmrob.object, nboot=1000, return.coef = FALSE, return.indices = FALSE, centered=TRUE) {
+frb <- function(lmrob.object, nboot=1000, return.coef = FALSE, return.indices = FALSE, centered=TRUE,variate=1) {
   lmrob.Chi <- Mchi
   lmrob.Psi <- Mpsi
   co <- lmrob.object$control
@@ -90,7 +90,7 @@ frb <- function(lmrob.object, nboot=1000, return.coef = FALSE, return.indices = 
           as.integer(p), as.double(beta.mm), as.double(scale), 
           as.double(ss), bb=as.double(boot.beta), as.integer(nboot),
           as.double(x3), as.double(v2), 
-          bind = as.integer(boot.indices), PACKAGE="FRB")
+          bind = as.integer(boot.indices), varib=variate, PACKAGE="FRB")
   ab <- matrix(a$bb, nboot, p)
   if(!centered) ab <- scale(ab, scale=FALSE, center = -beta.mm)
   ib <- matrix(a$bind, nboot, n)

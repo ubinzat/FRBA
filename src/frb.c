@@ -320,7 +320,7 @@ void sampler_i(int n, int *x)
  */
 int i;
 for(i=0;i<n;i++) 
-	 x[i] = (int) ( n/2 * unif_rand() );
+	 x[i] = (int) ( (n-10) * unif_rand() );
 	/* x[i] = (int) ( n * unif_rand() );
 }
 

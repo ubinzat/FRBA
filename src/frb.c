@@ -11,7 +11,7 @@
 
 void R_frb( double *xx, double *y, double *w, int *n, int *p, double *beta_m,
 		double *scale, double *chi_res_s, double *bbetas, int *nboot,
-		double *xx3, double *v2, int *bind,int *varr)
+		double *xx3, double *v2, int *bind)
 {
 
 
@@ -317,16 +317,9 @@ void sampler_i(int n, int *x)
  * rand() returns an integer between 0 and RAND_MAX
  */
 int i;
-if (varr==1) {
      for(i=0;i<n;i++) 
 	/* n i n/2 yaptım */
 	x[i] = (int) ( n * unif_rand() );
-} else {
-         for(i=0;i<n;i++) 
-	/* n i n/2 yaptım */
-	x[i] = (int) ( n/2 * unif_rand() );
-}
-
 }
 
 

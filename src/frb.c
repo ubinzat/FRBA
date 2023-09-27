@@ -14,7 +14,7 @@ void R_frb( double *xx, double *y, double *w, int *n, int *p, double *beta_m,
 		double *xx3, double *v2, int *bind)
 {
 
-int half = n / 2
+
 void sampler_i(int n, int *x);
 void reset_mat(double**, int, int);
 void reset_vec(double*, int);
@@ -35,8 +35,7 @@ void disp_mat(double **, int, int);
 register int i,j;
 double  **x, **x3,  **x2, **x4, *v_aux, *v, s=0;
 int *indices;
-/* half
-int half = n / 2
+
 
 x = (double **) malloc( sizeof(double *) * (*n) );
 x2 = (double **) malloc( sizeof(double *) * (*p) );
@@ -321,7 +320,7 @@ void sampler_i(int n, int *x)
  */
 int i;
 for(i=0;i<n;i++) 
-	 x[i] = (int) ( half * unif_rand() );
+	 x[i] = (int) ( n/2 * unif_rand() );
 	/* x[i] = (int) ( n * unif_rand() );
 }
 
